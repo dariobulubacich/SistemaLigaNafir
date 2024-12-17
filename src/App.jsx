@@ -1,19 +1,25 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./pages/Login";
-import UserDashboard from "./pages/UserDashboard";
-import AdminDashboard from "./pages/AdminDashboard";
-import Ruta1Page from "./pages/Ruta1Page"; // Nueva página
-import Ruta2Page from "./pages/Ruta2Page"; // Nueva página
+import Auth from "./components/pages/auth/Auth"; // Componente de Login/Register
+import AgregarJugadores from "./components/pages/agregarjugadores/AgregarJugadores";
+import ListarJugadores from "./components/pages/listarjugadores/ListarJugadores";
+import { ProtectedLayout } from "./components/layout/protectedlayout/ProtectedLayout";
+import ListarClientes from "./components/pages/listarclientes/ListarClientes";
+import IngresosMensuales from "./components/pages/ingresosmensuales/IngresosMensuales";
+import PagesClientes from "./components/pages/pagesclientes/PagesClientes";
+// Layout Protegido
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/user-dashboard" element={<UserDashboard />} />
-        <Route path="/admin-dashboard" element={<AdminDashboard />} />
-        <Route path="/ruta1" element={<Ruta1Page />} />
-        <Route path="/ruta2" element={<Ruta2Page />} /> {/* Nueva ruta */}
+        <Route path="/" element={<Auth />} />
+        <Route element={<ProtectedLayout />}>
+          <Route path="/AgregarJugadores" element={<AgregarJugadores />} />
+          <Route path="/ListarJugadores" element={<ListarJugadores />} />
+          <Route path="/PagesClientes" element={<PagesClientes />} />
+          <Route path="/ListarClientes" element={<ListarClientes />} />
+          <Route path="/IngresosMensuales" element={<IngresosMensuales />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
