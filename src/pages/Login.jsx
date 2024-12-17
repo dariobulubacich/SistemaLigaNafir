@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { auth, db } from "../../firebase"; // Importa tu configuración de Firebase
+import { auth, db } from "../firebase"; // Importa tu configuración de Firebase
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,

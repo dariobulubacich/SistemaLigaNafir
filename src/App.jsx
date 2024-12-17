@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./pages/login/Login";
-import UserDashboard from "./pages/userdashboard/UserDashboard";
-import AdminDashboard from "./pages/admindashboard/AdminDashboard";
-import Ruta1Page from "./pages/ruta1/Ruta1Page"; // Nueva página
-import Ruta2Page from "./pages/ruta2/Ruta2Page"; // Nueva página
+import Login from "./pages/Login";
+import UserDashboard from "./pages/UserDashboard";
+import AdminDashboard from "./pages/AdminDashboard";
+import Ruta1Page from "./pages/Ruta1Page"; // Nueva página
+import Ruta2Page from "./pages/Ruta2Page"; // Nueva página
 
 function App() {
   return (
